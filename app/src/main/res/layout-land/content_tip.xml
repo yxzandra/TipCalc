@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtTip"
+        android:gravity="center_horizontal"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        android:layout_marginTop="10dp" />
+<RelativeLayout
+    android:layout_marginTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/txtTip"
+    android:background="@drawable/fondo_edittext_land">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/layoutTip"
+        android:padding="25dp">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/main.hint.bill"
+            android:ems="9"
+            android:id="@+id/inputBill"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main.button.submit"
+            android:id="@+id/btnSubmit"
+            android:background="@color/colorAccent"
+            android:textColor="@color/icons"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/layoutTip"
+        android:layout_toRightOf="@+id/layoutTip"
+        android:layout_alignTop="@+id/layoutTip"
+        android:gravity="center_horizontal"
+        android:id="@+id/layoutPercentage"
+        android:padding="25dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:hint="@string/main.button.percentage"
+            android:ems="9"
+            android:id="@+id/inputPercentage"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main.button.increase"
+            android:id="@+id/btnIncrease"
+            android:background="@color/colorAccent"
+            android:textColor="@color/icons"
+            android:textSize="@dimen/sizePlusMinus"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main.button.decrease"
+            android:id="@+id/btnDecrease"
+            android:background="@color/colorAccent"
+            android:textColor="@color/icons"
+            android:textSize="@dimen/sizePlusMinus"/>
+    </LinearLayout>
+</RelativeLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/separator"
+        android:layout_below="@id/layoutPercentage"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="@string/main.button.clear"
+        android:id="@+id/btnClear"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/secondary_text"
+        android:background="@drawable/ic_garbage"
+        android:contentDescription="@string/borrar_historial" />
+
+</RelativeLayout>
